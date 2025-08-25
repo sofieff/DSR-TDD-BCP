@@ -1,0 +1,20 @@
+[project]
+name = "dsr-tdd-bcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "allure-pytest>=2.15.0",
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.1",
+    "scikit-learn>=1.7.1",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.4"
+addopts = "-ra -q --tb=short"
+testpaths = ["2_writing_tests", "3_test_to_fail", "4_test_to_pass", "SOLUTIONS"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+pythonpath = ["."]
